@@ -18,4 +18,5 @@ const Button = ({ size = 48, active, onClick, children }: ButtonProps) => {
       </button>
     );
   };
-  
+
+export default Button;
