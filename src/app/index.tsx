@@ -88,8 +88,10 @@ function App() {
                     stop:  () =>  pauseSong()
                 });
             }
+        } catch (error) {
+            dispatch(PLAY_SONG(0));
         }
-    }
+    };
 
 
 }
