@@ -50,4 +50,8 @@ function App() {
         }
     }, [searchText, songs]);
 
+    const isSongsThere = () => !!songs.length;
+
+    const audioPlayer = (): HTMLAudioElement => audio.current!;
+
 }
