@@ -14,6 +14,9 @@ export const playStateReducer = (
         case T_PAUSE_SONG: {
             return { ...state, playing: false};
         }
+        case T_RESUME_SONG: {
+            return { ...state, playing: true };
+        }
     }
 
 }
