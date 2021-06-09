@@ -1,0 +1,21 @@
+// imports
+import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { FaChevronLeft } from 'react-icons/fa';
+
+import { Header, Empty } from '../components';
+import { useResize } from '../hooks';
+
+import {
+  ADD_SONGS,
+  PLAY_SONG,
+  PAUSE_SONG,
+  RESUME_SONG,
+  DELETE_SONG,
+  SET_VIEW,
+} from '../redux';
+
+import AudioSession from '../services/audio-session';
+import { Track, Menu, Home, NowPlaying, Playlist } from '../views';
+import { setTheme } from '../utils';
+import './styles.css';
