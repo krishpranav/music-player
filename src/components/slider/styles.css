@@ -1,0 +1,121 @@
+.slider {
+    position: relative;
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+  }
+  
+  .slider__range {
+    opacity: 0;
+    user-select: none;
+    position: absolute;
+  }
+  
+  .slider__track {
+    top: 50%;
+    height: 50%;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    user-select: none;
+    position: absolute;
+    background: #fcb045; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    border-radius: 0 0 var(--size) var(--size);
+  }
+  
+  .slider__dial {
+    left: 0px;
+    z-index: 40;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    will-change: transform;
+    width: var(--dial-size);
+    height: var(--dial-size);
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    --dial-calc: calc(calc(var(--dial-size) / 2) * -0.5);
+    transform: translate(
+      var(--dial-calc),
+      calc(calc(var(--size) / 2) + var(--dial-calc))
+    );
+  }
+  .slider__dial:focus {
+    outline: none;
+  }
+  
+  .slider__info {
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    border-radius: 50%;
+    position: absolute;
+    user-select: none;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    font: 400 16px/1.1 'Roboto', sans-serif;
+    top: calc(calc(var(--dial-size) / 2));
+    left: calc(calc(var(--dial-size) / 2));
+    width: calc(var(--size) - calc(calc(var(--dial-size))));
+    height: calc(var(--size) - calc(calc(var(--dial-size))));
+  }
+  
+  .slider__blocker {
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    will-change: transform;
+    transform-origin: top center;
+    background-color: var(--bg-color-secondary);
+  }
+  
+  .slider__end,
+  .slider__start {
+    z-index: 0;
+    position: absolute;
+    background: #833ab4;
+    border-radius: 50% 50% 0 0;
+    width: calc(var(--dial-size) / 2);
+    height: calc(var(--dial-size) / 2);
+    top: calc(50% - var(--dial-size) / 4.1);
+    clip-path: polygon(0 0, 120% 0%, 120% 50%, 0 50%);
+  }
+  
+  .slider__start {
+    background-color: var(--bg-color-secondary);
+    right: 0;
+  }
+  
+  .slider__currtime,
+  .slider__totaltime {
+    font-size: 12px;
+    z-index: 50;
+    left: -12px;
+    font-weight: bold;
+    position: absolute;
+    color: var(--color-secondary);
+    top: calc(40% - var(--dial-size) / 4.1);
+  }
+  
+  .slider__totaltime {
+    right: -12px;
+    left: unset;
+  }
+  
