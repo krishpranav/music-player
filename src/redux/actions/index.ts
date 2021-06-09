@@ -33,3 +33,7 @@ export const PLAY_SONG = (index: number) => ({
 export const PAUSE_SONG = () => ({
     type: T_PAUSE_SONG,
 });
+
+export const RESUME_SONG = () => ({
+    type: T_RESUME_SONG,
+});
