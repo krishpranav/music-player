@@ -54,4 +54,14 @@ function App() {
 
     const audioPlayer = (): HTMLAudioElement => audio.current!;
 
+    const play = async() => {
+        if (audio.current) {
+            try {
+                await audioPlayer().play();
+            } catch (error) {
+                console.trace(error);
+            }
+        }
+    };
+
 }
