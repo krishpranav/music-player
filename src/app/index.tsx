@@ -19,3 +19,14 @@ import AudioSession from '../services/audio-session';
 import { Track, Menu, Home, NowPlaying, Playlist } from '../views';
 import { setTheme } from '../utils';
 import './styles.css';
+
+function App() {
+    const prevPlayState = useRef({ playing: false, index: -1});
+
+    const [ref, size] = useResize();
+
+    const input = useRef(null);
+    const audio = useRef(null);
+    const dispathc = useDispatch();
+
+}
