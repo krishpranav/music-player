@@ -5,4 +5,9 @@ const useScroll = () => {
         x: undefined,
         y: undefined,
     });
+
+    const [prevPos, setPrevPos] = useState<any>({
+        x: undefined,
+        y: undefined,
+    });
 }
