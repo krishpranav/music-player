@@ -8,5 +8,9 @@ const useResize = () => {
     const [node, setNode] = useState(null);
 
     const observer = useRef<any>(null);
-    
+
+    const disconnect = useCallback(() => {
+        const { current } = observer;
+        current && current!.disconnect();
+    }, []);
 }
