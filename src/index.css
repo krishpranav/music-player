@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap');
+
+:root {
+  --padding: 24px;
+
+  --bg-color: #191b2d;
+  --bg-color-accent: #35395f;
+  --bg-color-accent-2: #20233a;
+  --bg-color-secondary: #4a5085;
+
+  --color-primary: rgba(255, 255, 255, 1);
+  --color-secondary: rgba(255, 255, 255, 0.78);
+  --color-disabled: rgba(255, 255, 255, 0.46);
+
+  --transition: cubic-bezier(0.62, 0.44, 0, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-weight: 300;
+  overscroll-behavior-y: none;
+  font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
