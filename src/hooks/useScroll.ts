@@ -10,4 +10,5 @@ const useScroll = () => {
         x: undefined,
         y: undefined,
     });
+    const [node, setNode] = useState<HTMLElement | null>(null);
 }
