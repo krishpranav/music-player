@@ -15,3 +15,8 @@ export const ADD_SONGS = (songs: any) => ({
     type: T_ADD_SONGS,
     songs,
 });
+
+export const DELETE_SONGS = (index: any) => ({
+    type: T_REMOVE_SONGS,
+    index,
+});
