@@ -24,5 +24,11 @@ const useResize = () => {
         );
         node && observer.current.observe(node);
       }, [node]);
-    
-}
+     
+    useLayoutEffect(() => {
+        observe();
+        return () => disconnect();
+    }, [observe, disconnect]);
+
+    return useMemo(() => [setnode, size], [setNode, size]);
+};
