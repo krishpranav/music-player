@@ -34,4 +34,8 @@ function App() {
     const settings = useSelector((state: any) => state.settings);
     const playState = useSelector((state: any) => state.playState);
     
+    const [range, setRange] = useState(0);
+    const [showMenu, setShowMenu] = useState(false);
+    const [searchText, setSearchText] = useState('');
+
 }
