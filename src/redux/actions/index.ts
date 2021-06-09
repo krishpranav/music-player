@@ -10,3 +10,8 @@ import {
   T_SET_VISUALIZER,
   T_SET_VIEW,
 } from '../types';
+
+export const ADD_SONGS = (songs: any) => ({
+    type: T_ADD_SONGS,
+    songs,
+});
