@@ -6,5 +6,7 @@ const useResize = () => {
         height: undefined,
     });
     const [node, setNode] = useState(null);
+
+    const observer = useRef<any>(null);
     
 }
