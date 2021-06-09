@@ -21,21 +21,23 @@ import { setTheme } from '../utils';
 import './styles.css';
 
 function App() {
-    const prevPlayState = useRef({ playing: false, index: -1});
+    const prevPlayState = useRef({ playing: false, index: -1 });
 
     const [ref, size] = useResize();
 
     const input = useRef(null);
     const audio = useRef(null);
-    const dispathc = useDispatch();
+    const dispatch = useDispatch();
 
     const { view } = useSelector((state: any) => state.app);
     const songs = useSelector((state: any) => state.songs);
     const settings = useSelector((state: any) => state.settings);
     const playState = useSelector((state: any) => state.playState);
-    
+
     const [range, setRange] = useState(0);
     const [showMenu, setShowMenu] = useState(false);
     const [searchText, setSearchText] = useState('');
+
+    useMemo(() => setTheme(settings.light), [settings.light]);
 
 }
