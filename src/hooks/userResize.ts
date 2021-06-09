@@ -13,4 +13,16 @@ const useResize = () => {
         const { current } = observer;
         current && current!.disconnect();
     }, []);
+
+    const observe = useCallback(() => {
+        observer.current = new ResizeObserver(
+          ([
+            {
+              contentRect: { width, height },
+            },
+          ]) => setSize({ width, height }),
+        );
+        node && observer.current.observe(node);
+      }, [node]);
+    
 }
