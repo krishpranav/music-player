@@ -64,4 +64,10 @@ function App() {
         }
     };
 
+    const pause = () => {
+        if (audio.current) {
+            audioPlayer().pause();
+        }
+    };
+
 }
