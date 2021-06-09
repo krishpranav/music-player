@@ -54,6 +54,7 @@ function App() {
 
     const audioPlayer = (): HTMLAudioElement => audio.current!;
 
+    // play the song
     const play = async() => {
         if (audio.current) {
             try {
@@ -64,10 +65,31 @@ function App() {
         }
     };
 
+    // song of pause the song
     const pause = () => {
         if (audio.current) {
             audioPlayer().pause();
         }
     };
+
+    const start = async(index: number) => {
+        try {
+            if (audio.current && songs[index]) {
+                const htmlAudio: HTMLAudioElement = audioPlayer();
+                htmlAudio.src = URL.createObjectURL(songs[index]);
+                
+                await htmlAudio.play();
+
+                AudioSession.addNewSong(songs[index], {
+                    next:  () =>  nextSong(true),
+                    prev:  () =>  prevSong(true),
+                    play:  () =>  resumeSong(),
+                    pause: () => pauseSong(),
+                    stop:  () =>  pauseSong()
+                });
+            }
+        }
+    }
+
 
 }
