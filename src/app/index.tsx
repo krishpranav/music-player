@@ -1,4 +1,3 @@
-// imports
 import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaChevronLeft } from 'react-icons/fa';
@@ -21,6 +20,7 @@ import { setTheme } from '../utils';
 import './styles.css';
 
 function App() {
+
     const prevPlayState = useRef({ playing: false, index: -1 });
 
     const [ref, size] = useResize();
@@ -39,5 +39,15 @@ function App() {
     const [searchText, setSearchText] = useState('');
 
     useMemo(() => setTheme(settings.light), [settings.light]);
+
+    const filterSongs = useCallback(() => {
+        if (!searchText) {
+            return songs;
+        } else {
+            return songs.filter((s: any) =>
+              s.name.toLowerCase().includes(searchText.toLowerCase()),
+            );
+        }
+    }, [searchText, songs]);
 
 }
