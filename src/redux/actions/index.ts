@@ -37,3 +37,8 @@ export const PAUSE_SONG = () => ({
 export const RESUME_SONG = () => ({
     type: T_RESUME_SONG,
 });
+
+export const SET_GRID = (value: boolean) => ({
+    type: T_SET_VISUALIZER,
+    value,
+});
