@@ -98,5 +98,11 @@ function App() {
         htmlAudio.src = '';
     };
 
+    const shuffleSong = () => {
+        if (isSongsThere()) {
+            dispatch(PLAY_SONG(Math.floor(Math.random() * songs.length)));
+        }
+    };
+
 
 }
