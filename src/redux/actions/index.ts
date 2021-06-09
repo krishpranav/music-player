@@ -11,17 +11,25 @@ import {
   T_SET_VIEW,
 } from '../types';
 
+// add songs function
 export const ADD_SONGS = (songs: any) => ({
     type: T_ADD_SONGS,
     songs,
 });
 
+// delete song function
 export const DELETE_SONGS = (index: any) => ({
     type: T_REMOVE_SONGS,
     index,
 });
 
+// const play song function
 export const PLAY_SONG = (index: number) => ({
     type: T_PLAY_SONG,
     index,
+});
+
+// const pause song function
+export const PAUSE_SONG = () => ({
+    type: T_PAUSE_SONG,
 });
