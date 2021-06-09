@@ -29,4 +29,9 @@ function App() {
     const audio = useRef(null);
     const dispathc = useDispatch();
 
+    const { view } = useSelector((state: any) => state.app);
+    const songs = useSelector((state: any) => state.songs);
+    const settings = useSelector((state: any) => state.settings);
+    const playState = useSelector((state: any) => state.playState);
+    
 }
