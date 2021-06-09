@@ -5,4 +5,6 @@ const useResize = () => {
         width:  undefined,
         height: undefined,
     });
+    const [node, setNode] = useState(null);
+    
 }
