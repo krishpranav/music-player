@@ -93,5 +93,10 @@ function App() {
         }
     };
 
+    const stop = () => {
+        const htmlAudio: HTMLAudioElement = audioPlayer();
+        htmlAudio.src = '';
+    };
+
 
 }
