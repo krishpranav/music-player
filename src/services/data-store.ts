@@ -13,4 +13,8 @@ export default class DataStore {
     public static get = (key: string, callback?: any) => {
         return localforage.getItem(key, callback);
     };
+
+    public static delete = (key: string, callback?: any) => {
+        return localforage.removeItem(key, callback);
+    };
 }
