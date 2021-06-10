@@ -6,3 +6,7 @@ declare global {
         jsmediatags:   any,
     }
 }
+
+const Navigator = window.navigator as any;
+
+const isMediaSessionSupported = 'mediaSession' in navigator;
