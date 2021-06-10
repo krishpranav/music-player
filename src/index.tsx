@@ -11,3 +11,5 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import { reducers } from './redux';
 import DataStore from './services/data-store';
+
+const WINDOW = window as any;
