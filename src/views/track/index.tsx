@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { BsFillSkipBackwardFill, BsFillSkipForwardFill } from 'react-icons/bs';
 import { RiShuffleFill, RiRepeat2Fill, RiRepeatOneFill } from 'react-icons/ri';
 
-import AudioSession from '../../services/audio-sessions';
+import AudioSession from '../../services/audio-session';
 import { Button, Slider, Visualizer } from '../../components';
 import { SET_REPEAT } from '../../redux';
 import { songTitle } from '../../utils';

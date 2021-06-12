@@ -1,73 +1,72 @@
 .button__wrapper {
-    z-index: 1;
-    outline: none;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 8px 20px;
-    position: relative;
-    border-radius: 32px;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    min-width: var(--button-size);
-    min-height: var(--button-size);
-    background: linear-gradient(90deg, #833ab4, #fcb045, #fd1d1d, #833ab4);
-    background-size: 400%;
+  z-index: 1;
+  outline: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px 20px;
+  position: relative;
+  border-radius: 32px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  min-width: var(--button-size);
+  min-height: var(--button-size);
+  background: linear-gradient(90deg, #833ab4, #fcb045, #fd1d1d, #833ab4);
+  background-size: 400%;
+}
+
+.button__wrapper:hover,
+.button__wrapper.button__wrapper--active {
+  animation: animate 8s linear infinite;
+  transition: 0.3s;
+}
+
+.button__content {
+  --surround: calc(var(--button-size) / 8);
+  display: flex;
+  font-weight: 600;
+  border-radius: 50%;
+  position: absolute;
+  background: #191b2d;
+  align-items: center;
+  justify-content: center;
+  top: calc(var(--surround) / 2);
+  left: calc(var(--surround) / 2);
+  width: calc(100% - var(--surround));
+  height: calc(100% - var(--surround));
+  font-size: calc(var(--button-size) / 2.5);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 400%;
   }
-  
-  .button__wrapper:hover,
-  .button__wrapper.button__wrapper--active {
-    animation: animate 8s linear infinite;
-    transition: 0.3s;
+  100% {
+    background-position: 0%;
   }
-  
-  .button__content {
-    --surround: calc(var(--button-size) / 8);
-    display: flex;
-    font-weight: 600;
-    border-radius: 50%;
-    position: absolute;
-    background: #191b2d;
-    align-items: center;
-    justify-content: center;
-    top: calc(var(--surround) / 2);
-    left: calc(var(--surround) / 2);
-    width: calc(100% - var(--surround));
-    height: calc(100% - var(--surround));
-    font-size: calc(var(--button-size) / 2.5);
-  }
-  
-  @keyframes animate {
-    0% {
-      background-position: 400%;
-    }
-    100% {
-      background-position: 0%;
-    }
-  }
-  
-  .button__wrapper:before {
-    content: '';
-    opacity: 0;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    transition: 0.3s;
-    border-radius: 40px;
-    position: absolute;
-    background: linear-gradient(90deg, #833ab4, #fcb045, #fd1d1d, #833ab4);
-    background-size: 400%;
-  }
-  
-  .button__wrapper:hover:before {
-    opacity: 1;
-    transition: 0.3s;
-    filter: blur(8px);
-    animation: animate 8s linear infinite;
-  }
-  
+}
+
+.button__wrapper:before {
+  content: '';
+  opacity: 0;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  transition: 0.3s;
+  border-radius: 40px;
+  position: absolute;
+  background: linear-gradient(90deg, #833ab4, #fcb045, #fd1d1d, #833ab4);
+  background-size: 400%;
+}
+
+.button__wrapper:hover:before {
+  opacity: 1;
+  transition: 0.3s;
+  filter: blur(8px);
+  animation: animate 8s linear infinite;
+}

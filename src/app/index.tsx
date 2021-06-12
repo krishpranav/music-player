@@ -14,11 +14,10 @@ import {
   SET_VIEW,
 } from '../redux';
 
-import AudioSession from '../services/audio-sessions';
+import AudioSession from '../services/audio-session';
 import { Track, Menu, Home, NowPlaying, Playlist } from '../views';
 import { setTheme } from '../utils';
-
-import './style.css';
+import './styles.css';
 
 function App() {
   const prevPlayState = useRef({ playing: false, index: -1 });

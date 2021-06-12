@@ -8,10 +8,10 @@ import {
 } from './reducers';
 
 export const reducers = combineReducers({
-    app: appReducer,
-    songs: songReducer,
-    settings: settingsReducer,
-    playState: playStateReducer
+  app: appReducer,
+  songs: songReducer,
+  settings: settingsReducer,
+  playState: playStateReducer,
 });
 
 export * from './actions';

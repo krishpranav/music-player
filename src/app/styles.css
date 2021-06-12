@@ -1,0 +1,45 @@
+.app__wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background-color: var(--bg-color);
+}
+
+.app__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.app__content {
+  z-index: 2;
+  width: 100%;
+  background: transparent;
+}
+
+@media (min-width: 700px) {
+  .app__wrapper {
+    background-color: var(--bg-color-secondary);
+  }
+  .app__container {
+    width: 700px;
+    overflow: hidden;
+    height: calc(100% - 96px);
+    border-radius: var(--padding);
+    background-color: var(--bg-color);
+    box-shadow: 0 0px 0.6px rgba(0, 0, 0, 0.024),
+      0 0px 1.3px rgba(0, 0, 0, 0.031), 0 0px 2.2px rgba(0, 0, 0, 0.035),
+      0 0px 3.3px rgba(0, 0, 0, 0.037), 0 0px 4.8px rgba(0, 0, 0, 0.04),
+      0 0px 6.7px rgba(0, 0, 0, 0.041), 0 0px 9.6px rgba(0, 0, 0, 0.043),
+      0 0px 13.9px rgba(0, 0, 0, 0.046), 0 0px 21.4px rgba(0, 0, 0, 0.05),
+      0 0px 38px rgba(0, 0, 0, 0.06);
+  }
+}
